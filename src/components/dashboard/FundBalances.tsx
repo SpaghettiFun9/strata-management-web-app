@@ -50,7 +50,11 @@ const FundBalances = () => {
                   </span>
                 </div>
               </div>
-              <Progress value={fund.progress} className="h-2" indicatorClassName={cn(fund.color)} />
+              <Progress 
+                value={fund.progress} 
+                className="h-2" 
+                indicatorClassName={fund.color} 
+              />
             </div>
           ))}
         </div>
