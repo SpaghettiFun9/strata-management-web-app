@@ -1,5 +1,5 @@
 
-import { Home, Users, Banknote, FileText, Tool, Calendar, LogOut, Menu } from "lucide-react";
+import { Home, Users, Banknote, FileText, Wrench, Calendar, LogOut, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -20,7 +20,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
     { name: "Committee", href: "/committee", icon: Users },
     { name: "Finances", href: "/finances", icon: Banknote },
     { name: "Documents", href: "/documents", icon: FileText },
-    { name: "Maintenance", href: "/maintenance", icon: Tool },
+    { name: "Maintenance", href: "/maintenance", icon: Wrench },
     { name: "Meetings", href: "/meetings", icon: Calendar },
   ];
 

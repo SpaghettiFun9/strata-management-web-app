@@ -1,5 +1,5 @@
 
-import { Banknote, Users, FileText, Tool, Calendar } from "lucide-react";
+import { Banknote, Users, FileText, Wrench, Calendar } from "lucide-react";
 import MainLayout from "@/components/layout/MainLayout";
 import StatCard from "@/components/dashboard/StatCard";
 import MaintenanceRequests from "@/components/dashboard/MaintenanceRequests";
@@ -44,7 +44,7 @@ const Index = () => {
             title="Pending Requests"
             value="7"
             description="Maintenance issues"
-            icon={Tool}
+            icon={Wrench}
           />
         </div>
 

@@ -6,9 +6,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Search, Plus, Filter, Tool, Clock, CheckCircle, AlertTriangle } from "lucide-react";
+import { Search, Plus, Filter, Wrench, Clock, CheckCircle, AlertTriangle, CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+import { Calendar } from "@/components/ui/calendar";
 
 // Sample maintenance requests data
 const maintenanceRequests = [
@@ -109,9 +110,9 @@ const statusColors = {
 
 const statusIcons = {
   "pending": Clock,
-  "in-progress": Tool,
+  "in-progress": Wrench,
   "completed": CheckCircle,
-  "scheduled": Calendar,
+  "scheduled": CalendarIcon,
 };
 
 const Maintenance = () => {
@@ -177,7 +178,7 @@ const Maintenance = () => {
               {filteredRequests.length === 0 ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted">
-                    <Tool className="h-6 w-6 text-muted-foreground" />
+                    <Wrench className="h-6 w-6 text-muted-foreground" />
                   </div>
                   <h3 className="mt-4 text-lg font-medium">No maintenance requests found</h3>
                   <p className="mt-2 text-sm text-muted-foreground">
