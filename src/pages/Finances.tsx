@@ -96,7 +96,6 @@ const Finances = () => {
         <Tabs defaultValue="overview" onValueChange={setSelectedTab} className="space-y-4">
           <TabsList>
             <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="expenses">Expenses</TabsTrigger>
             <TabsTrigger value="levies">Levy Payments</TabsTrigger>
           </TabsList>
           
@@ -164,21 +163,6 @@ const Finances = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
-          <TabsContent value="expenses" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Expense Breakdown</CardTitle>
-                <CardDescription>Analysis of strata expenses by category</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-8">
-                  {/* Add detailed expense categories and charts here */}
-                  <p>Detailed expense tracking and categorization coming soon.</p>
                 </div>
               </CardContent>
             </Card>
