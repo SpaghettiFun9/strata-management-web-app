@@ -89,7 +89,7 @@ const Index = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
           <StatCard
             title="Total Units"
             value="24"
@@ -103,18 +103,6 @@ const Index = () => {
             icon={Banknote}
             trend="up"
             trendValue="5.2% from last year"
-          />
-          <StatCard
-            title="Documents"
-            value="58"
-            description="Required strata records"
-            icon={FileText}
-          />
-          <StatCard
-            title="Pending Requests"
-            value="7"
-            description="Maintenance issues"
-            icon={Wrench}
           />
         </div>
 
