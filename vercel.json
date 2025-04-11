@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "regions": ["syd1"],
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "env": {
+      "NEXT_PUBLIC_API_URL": "https://api.stratamanager.com",
+      "SECRET_KEY": "@secret_key"
+    },
+    "crons": [
+      {
+        "path": "/api/send-daily-notice",
+        "schedule": "0 8 * * *"
+      }
+    ],
+    "routes": [
+      { "src": "/docs/(.*)", "dest": "/static/docs/$1" },
+      { "src": "/old-link", "status": 301, "headers": { "Location": "/new-link" } }
+    ]
+  }
