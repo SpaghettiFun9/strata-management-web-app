@@ -41,7 +41,7 @@ const buildingImages = [
     alt: "Medium shot view of complex"
   },
   {
-    src: "/ap2.jpeg",
+    src: "/ap2.webp",
     alt: "Extreme long shot view"
   },
   {
