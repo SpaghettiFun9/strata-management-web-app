@@ -1,5 +1,5 @@
 
-import { Home, Users, Banknote, FileText, Wrench, Calendar, LogOut, Menu, Coffee, Mail, BookOpen, Tv, Info } from "lucide-react";
+import { Home, Users, Banknote, FileText, Wrench, Calendar, LogOut, Menu, Coffee, Mail, BookOpen, Tv, MessageSquare, ShieldAlert } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -25,8 +25,9 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
     { name: "Amenities", href: "/amenities", icon: Coffee },
     { name: "Community", href: "/community", icon: Tv },
     { name: "Resources", href: "/resources", icon: BookOpen },
+    { name: "Incident Report", href: "/incident-report", icon: ShieldAlert },
+    { name: "Feedback", href: "/feedback", icon: MessageSquare },
     { name: "Contact Us", href: "/contact", icon: Mail },
-    { name: "HTTP Info", href: "/http-info", icon: Info },
   ];
 
   const closeSidebarIfMobile = () => {
@@ -60,8 +61,8 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
       >
         <div className="flex items-center justify-between px-4 py-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-md bg-accent flex items-center justify-center text-accent-foreground font-bold">SS</div>
-            <h1 className="text-xl font-bold">Strata Savvy</h1>
+            <div className="w-8 h-8 rounded-md bg-accent flex items-center justify-center text-accent-foreground font-bold">SM</div>
+            <h1 className="text-xl font-bold">Strata Management</h1>
           </div>
           {isMobile && (
             <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>

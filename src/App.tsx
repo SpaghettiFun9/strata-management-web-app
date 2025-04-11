@@ -14,7 +14,8 @@ import Amenities from "./pages/Amenities";
 import ContactUs from "./pages/ContactUs";
 import Resources from "./pages/Resources";
 import Community from "./pages/Community";
-import HttpInfo from "./pages/HttpInfo";
+import IncidentReport from "./pages/IncidentReport";
+import Feedback from "./pages/Feedback";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,7 +37,8 @@ const App = () => (
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/community" element={<Community />} />
-          <Route path="/http-info" element={<HttpInfo />} />
+          <Route path="/incident-report" element={<IncidentReport />} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
