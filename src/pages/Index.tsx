@@ -42,7 +42,7 @@ const buildingImages = [
   },
   {
     src: "/ap2.webp",
-    alt: "Extreme long shot view"
+    alt: "Extreme long shot view" 
   },
   {
     src: "/ap3.webp",
