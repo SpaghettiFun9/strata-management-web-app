@@ -37,20 +37,20 @@ const faqItems = [
 // Building images for the carousel
 const buildingImages = [
   {
-    src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
-    alt: "Oceania Views exterior"
+    src: "/ap1.webp",
+    alt: "Medium shot view of complex"
   },
   {
-    src: "https://images.unsplash.com/photo-1518005020951-eccb494ad742",
-    alt: "Oceania Views lobby"
+    src: "/ap2.jpeg",
+    alt: "Extreme long shot view"
   },
   {
-    src: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",
-    alt: "Oceania Views architectural details"
+    src: "/ap3.webp",
+    alt: "Apartment lobby"
   },
   {
-    src: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2",
-    alt: "Oceania Views from below"
+    src: "ap4.jpg",
+    alt: "Apartment room interior"
   }
 ];
 
