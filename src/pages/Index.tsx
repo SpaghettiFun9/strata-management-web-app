@@ -18,11 +18,11 @@ const faqItems = [
   },
   {
     question: "How do I report maintenance issues?",
-    answer: "You can report maintenance issues through the Maintenance page on this portal, or by emailing maintenance@oceaniaviews.com with details of the issue."
+    answer: "You can report maintenance issues through the Maintenance page on this portal. Please provide a detailed description and any relevant photos."
   },
   {
-    question: "What are the pool operating hours?",
-    answer: "The pool is open daily from 6:00 AM to 10:00 PM. Please respect quiet hours and pool rules posted in the pool area."
+    question: "How do I contact the strata committee?",
+    answer: "The strata management team can be contacted through the Contact Us page. lease refrain from emailing individual committee members directly."
   },
   {
     question: "How do I pay my strata levies?",
@@ -31,6 +31,14 @@ const faqItems = [
   {
     question: "Can I renovate my apartment?",
     answer: "Renovations require prior approval from the strata committee. Please submit detailed plans including contractor information and timeline at least 30 days before your intended start date."
+  },
+  {
+    question: "What should I do if I see suspicious activity in common areas?",
+    answer: "Please report it immediately using the Incident Report form. Security-related issues are prioritized and reviewed by the committee team as soon as possible."
+  },
+  {
+    question: "How do I suggest improvements or raise concerns?",
+    answer: "Use the Feedback & Suggestions page. Your input goes directly to the committee and is reviewed at the next meeting."
   }
 ];
 
