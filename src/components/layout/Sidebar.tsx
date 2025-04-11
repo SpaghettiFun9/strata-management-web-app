@@ -1,5 +1,5 @@
 
-import { Home, Users, Banknote, FileText, Wrench, Calendar, LogOut, Menu, Coffee, Mail, BookOpen, Tv, MessageSquare, ShieldAlert } from "lucide-react";
+import { Home, Users, Banknote, FileText, Wrench, Calendar, LogOut, Menu, Coffee, Mail, BookOpen, ShieldAlert, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -19,12 +19,10 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
     { name: "Dashboard", href: "/", icon: Home },
     { name: "Committee", href: "/committee", icon: Users },
     { name: "Finances", href: "/finances", icon: Banknote },
-    { name: "Documents", href: "/documents", icon: FileText },
+    { name: "Resources", href: "/resources", icon: BookOpen },
     { name: "Maintenance", href: "/maintenance", icon: Wrench },
     { name: "Meetings", href: "/meetings", icon: Calendar },
     { name: "Amenities", href: "/amenities", icon: Coffee },
-    { name: "Community", href: "/community", icon: Tv },
-    { name: "Resources", href: "/resources", icon: BookOpen },
     { name: "Incident Report", href: "/incident-report", icon: ShieldAlert },
     { name: "Feedback", href: "/feedback", icon: MessageSquare },
     { name: "Contact Us", href: "/contact", icon: Mail },
@@ -97,10 +95,10 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
         <div className="p-4 border-t border-sidebar-border">
           <div className="flex items-center gap-3 mb-3">
             <div className="bg-primary/10 text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center">
-              <span className="font-semibold">JD</span>
+              <span className="font-semibold">KP</span>
             </div>
             <div>
-              <p className="text-sm font-medium">Jane Doe</p>
+              <p className="text-sm font-medium">Kevin Phan</p>
               <p className="text-xs opacity-75">Chairperson</p>
             </div>
           </div>

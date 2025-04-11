@@ -8,10 +8,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
-import { AlertCircle, Mail, Phone, MapPin } from "lucide-react";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 // Form schema using Zod
 const contactFormSchema = z.object({
@@ -25,7 +24,6 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const ContactUs = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionType, setSubmissionType] = useState<"get" | "post">("post");
   
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -43,7 +41,6 @@ const ContactUs = () => {
     // Simulate form submission
     setTimeout(() => {
       console.log("Form values:", values);
-      console.log("Submission type:", submissionType);
       
       toast.success("Your message has been sent successfully!");
       form.reset();
@@ -74,39 +71,8 @@ const ContactUs = () => {
                 <form 
                   onSubmit={form.handleSubmit(onSubmit)} 
                   className="space-y-4"
-                  method={submissionType === "get" ? "get" : "post"}
-                  action={submissionType === "get" ? "/api/contact" : "#"}
+                  method="post"
                 >
-                  <div className="flex items-center space-x-2 mb-4">
-                    <Button
-                      type="button"
-                      variant={submissionType === "post" ? "default" : "outline"}
-                      size="sm"
-                      onClick={() => setSubmissionType("post")}
-                    >
-                      POST Request
-                    </Button>
-                    <Button
-                      type="button"
-                      variant={submissionType === "get" ? "default" : "outline"}
-                      size="sm"
-                      onClick={() => setSubmissionType("get")}
-                    >
-                      GET Request
-                    </Button>
-                  </div>
-                  
-                  <Alert>
-                    <AlertCircle className="h-4 w-4" />
-                    <AlertTitle>HTTP Request Demo</AlertTitle>
-                    <AlertDescription>
-                      This form demonstrates {submissionType === "post" ? "POST" : "GET"} requests. 
-                      {submissionType === "post" 
-                        ? " POST requests send data in the request body, making it suitable for sensitive data." 
-                        : " GET requests send data in the URL, visible in the address bar and less secure."}
-                    </AlertDescription>
-                  </Alert>
-
                   <FormField
                     control={form.control}
                     name="name"
@@ -213,13 +179,6 @@ const ContactUs = () => {
                   <h3 className="font-medium">Address</h3>
                   <p className="text-sm text-muted-foreground">123 Ocean Street, Sydney</p>
                   <p className="text-sm text-muted-foreground">NSW 2000, Australia</p>
-                </div>
-              </div>
-
-              <div className="rounded-md overflow-hidden mt-6 border h-64">
-                {/* This would be a real Google Maps embed in production */}
-                <div className="w-full h-full bg-slate-100 flex items-center justify-center text-sm text-muted-foreground">
-                  Google Maps Embed Placeholder
                 </div>
               </div>
             </CardContent>

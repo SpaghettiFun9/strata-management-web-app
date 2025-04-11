@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import MainLayout from "@/components/layout/MainLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -96,7 +95,6 @@ const Finances = () => {
         <Tabs defaultValue="overview" onValueChange={setSelectedTab} className="space-y-4">
           <TabsList>
             <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="levies">Levy Payments</TabsTrigger>
           </TabsList>
           
           <TabsContent value="overview" className="space-y-4">
@@ -163,46 +161,6 @@ const Finances = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
-          <TabsContent value="levies" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Levy Collection Rates</CardTitle>
-                <CardDescription>Tracking quarterly levy payments</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-2">
-                <div className="h-80">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <LineChart
-                      data={levyPayments}
-                      margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                    >
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      <Line type="monotone" dataKey="expected" name="Expected Levies" stroke="#8884d8" activeDot={{ r: 8 }} />
-                      <Line type="monotone" dataKey="collected" name="Collected Levies" stroke="#82ca9d" />
-                    </LineChart>
-                  </ResponsiveContainer>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardHeader>
-                <CardTitle>Levy Payment Status</CardTitle>
-                <CardDescription>Current quarter payment tracking</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-8">
-                  {/* Add levy payment tracking by unit here */}
-                  <p>Detailed levy payment tracking by unit coming soon.</p>
                 </div>
               </CardContent>
             </Card>

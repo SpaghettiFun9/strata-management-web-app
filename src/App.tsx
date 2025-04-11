@@ -8,13 +8,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Committee from "./pages/Committee";
 import Finances from "./pages/Finances";
-import Documents from "./pages/Documents";
+import Resources from "./pages/Resources";
 import Maintenance from "./pages/Maintenance";
 import Meetings from "./pages/Meetings";
 import Amenities from "./pages/Amenities";
 import ContactUs from "./pages/ContactUs";
-import Resources from "./pages/Resources";
-import Community from "./pages/Community";
 import IncidentReport from "./pages/IncidentReport";
 import Feedback from "./pages/Feedback";
 import NotFound from "./pages/NotFound";
@@ -32,13 +30,11 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/committee" element={<Committee />} />
             <Route path="/finances" element={<Finances />} />
-            <Route path="/documents" element={<Documents />} />
+            <Route path="/resources" element={<Resources />} />
             <Route path="/maintenance" element={<Maintenance />} />
             <Route path="/meetings" element={<Meetings />} />
             <Route path="/amenities" element={<Amenities />} />
             <Route path="/contact" element={<ContactUs />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/community" element={<Community />} />
             <Route path="/incident-report" element={<IncidentReport />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="*" element={<NotFound />} />
