@@ -5,6 +5,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "@/components/layout/MainLayout";
+import BackgroundImage from "@/components/layout/BackgroundImage";
 import Index from "./pages/Index";
 import Committee from "./pages/Committee";
 import Finances from "./pages/Finances";
@@ -25,20 +27,23 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <BackgroundImage />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/committee" element={<Committee />} />
-            <Route path="/finances" element={<Finances />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/maintenance" element={<Maintenance />} />
-            <Route path="/meetings" element={<Meetings />} />
-            <Route path="/amenities" element={<Amenities />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/incident-report" element={<IncidentReport />} />
-            <Route path="/feedback" element={<Feedback />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <MainLayout>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/committee" element={<Committee />} />
+              <Route path="/finances" element={<Finances />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/maintenance" element={<Maintenance />} />
+              <Route path="/meetings" element={<Meetings />} />
+              <Route path="/amenities" element={<Amenities />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/incident-report" element={<IncidentReport />} />
+              <Route path="/feedback" element={<Feedback />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </MainLayout>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

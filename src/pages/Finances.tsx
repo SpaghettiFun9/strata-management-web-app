@@ -6,7 +6,6 @@ import { Progress } from "@/components/ui/progress";
 import FundBalances from "@/components/dashboard/FundBalances";
 import { cn } from "@/lib/utils";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
-import ImageGallery from "@/components/ui/ImageGallery";
 
 // Sample data for charts
 const monthlyExpensesData = [
@@ -80,13 +79,6 @@ const fundColors = {
   Capital: "bg-accent"
 };
 
-const financeImages = [
-  {
-    src: "/ap2.webp",
-    alt: "Building Investment Projects"
-  }
-];
-
 const Finances = () => {
   const [selectedTab, setSelectedTab] = useState("overview");
 
@@ -99,12 +91,6 @@ const Finances = () => {
             Track and manage strata finances and levy payments
           </p>
         </div>
-
-        <ImageGallery 
-          images={financeImages} 
-          className="max-w-3xl mx-auto"
-          imageHeight="h-48 md:h-64"
-        />
 
         <Tabs defaultValue="overview" onValueChange={setSelectedTab} className="space-y-4">
           <TabsList>
