@@ -11,6 +11,16 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
 import { Mail, Phone, MapPin } from "lucide-react";
+import ImageGallery from "@/components/ui/ImageGallery";
+import { env } from "@/env";
+
+// Contact page images
+const contactPageImages = [
+  {
+    src: "/ap3.webp",
+    alt: "Management Office"
+  }
+];
 
 // Form schema using Zod
 const contactFormSchema = z.object({
@@ -57,6 +67,8 @@ const ContactUs = () => {
             Get in touch with the strata management team
           </p>
         </div>
+
+        <ImageGallery images={contactPageImages} className="max-w-2xl mx-auto" />
 
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
@@ -177,8 +189,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="font-medium">Address</h3>
-                  <p className="text-sm text-muted-foreground">123 Ocean Street, Sydney</p>
-                  <p className="text-sm text-muted-foreground">NSW 2000, Australia</p>
+                  <p className="text-sm text-muted-foreground">{env.BUILDING_ADDRESS}</p>
                 </div>
               </div>
             </CardContent>

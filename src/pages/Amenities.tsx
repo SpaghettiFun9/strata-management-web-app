@@ -4,6 +4,22 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, MapPin, Users, Wifi, Tv, Coffee, Dumbbell } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ImageGallery from "@/components/ui/ImageGallery";
+
+const amenityImages = [
+  {
+    src: "/ap1.webp",
+    alt: "Community Room Facilities"
+  },
+  {
+    src: "/ap3.webp",
+    alt: "Swimming Pool and Spa Area" 
+  },
+  {
+    src: "/ap4.jpg",
+    alt: "Modern Gym Equipment"
+  }
+];
 
 const amenitiesData = [
   {
@@ -56,6 +72,8 @@ const Amenities = () => {
           <h1 className="text-2xl font-bold tracking-tight">Building Amenities</h1>
           <Button>Book an Amenity</Button>
         </div>
+        
+        <ImageGallery images={amenityImages} />
         
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {amenitiesData.map((amenity, index) => (
