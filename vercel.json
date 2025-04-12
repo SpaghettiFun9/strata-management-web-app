@@ -1,3 +1,4 @@
+
 {
     "version": 2,
     "regions": ["syd1"],
@@ -5,7 +6,8 @@
     "outputDirectory": "dist",
     "env": {
       "NEXT_PUBLIC_API_URL": "https://api.stratamanager.com",
-      "SECRET_KEY": "@secret_key"
+      "SECRET_KEY": "@secret_key",
+      "VITE_BUILDING_ADDRESS": "123 Ocean Street, Sydney, NSW 2000, Australia"
     },
     "crons": [
       {
