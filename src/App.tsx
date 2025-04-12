@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "@/components/layout/MainLayout";
+import BackgroundImage from "@/components/layout/BackgroundImage";
 import Index from "./pages/Index";
 import Committee from "./pages/Committee";
 import Finances from "./pages/Finances";
@@ -26,6 +27,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <BackgroundImage />
         <BrowserRouter>
           <MainLayout>
             <Routes>
