@@ -1,0 +1,20 @@
+
+{
+  "version": 2,
+  "functions": {
+    "api/receive-maintenance-request.ts": {
+      "runtime": "edge"
+    },
+    "api/send-meeting-notification.ts": {
+      "runtime": "edge"
+    },
+    "api/generate-resident-qr.ts": {
+      "runtime": "edge"
+    }
+  },
+  "routes": [
+    { "src": "/api/maintenance", "dest": "/api/receive-maintenance-request.ts" },
+    { "src": "/api/notify", "dest": "/api/send-meeting-notification.ts" },
+    { "src": "/api/resident-qr", "dest": "/api/generate-resident-qr.ts" }
+  ]
+}
