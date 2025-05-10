@@ -7,7 +7,7 @@ This directory contains serverless edge functions for the Strata Management plat
 
 ### 1. Maintenance Request API
 **Endpoint:** `/api/maintenance`  
-**Function:** `receive-maintenance-request.js`  
+**Function:** `receive-maintenance-request.ts`  
 **Method:** POST  
 **Purpose:** Allows residents to submit maintenance requests for their units.
 
@@ -26,7 +26,7 @@ This directory contains serverless edge functions for the Strata Management plat
 
 ### 2. Meeting Notification API
 **Endpoint:** `/api/notify`  
-**Function:** `send-meeting-notification.js`  
+**Function:** `send-meeting-notification.ts`  
 **Method:** POST  
 **Purpose:** Sends notifications about upcoming strata meetings to residents.
 
@@ -48,7 +48,7 @@ This directory contains serverless edge functions for the Strata Management plat
 
 ### 3. Resident QR Code Generator API
 **Endpoint:** `/api/resident-qr`  
-**Function:** `generate-resident-qr.js`  
+**Function:** `generate-resident-qr.ts`  
 **Methods:** GET or POST  
 **Purpose:** Generates unique QR codes for residents to access amenities and common areas.
 

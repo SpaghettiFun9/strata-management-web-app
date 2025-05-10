@@ -2,19 +2,19 @@
 {
   "version": 2,
   "functions": {
-    "api/receive-maintenance-request.js": {
-      "runtime": "@vercel/node@2.0.0"
+    "api/receive-maintenance-request.ts": {
+      "runtime": "edge"
     },
-    "api/send-meeting-notification.js": {
-      "runtime": "@vercel/node@2.0.0"
+    "api/send-meeting-notification.ts": {
+      "runtime": "edge"
     },
-    "api/generate-resident-qr.js": {
-      "runtime": "@vercel/node@2.0.0"
+    "api/generate-resident-qr.ts": {
+      "runtime": "edge"
     }
   },
   "routes": [
-    { "src": "/api/maintenance", "dest": "/api/receive-maintenance-request.js" },
-    { "src": "/api/notify", "dest": "/api/send-meeting-notification.js" },
-    { "src": "/api/resident-qr", "dest": "/api/generate-resident-qr.js" }
+    { "src": "/api/maintenance", "dest": "/api/receive-maintenance-request.ts" },
+    { "src": "/api/notify", "dest": "/api/send-meeting-notification.ts" },
+    { "src": "/api/resident-qr", "dest": "/api/generate-resident-qr.ts" }
   ]
 }
