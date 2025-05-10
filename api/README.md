@@ -1,4 +1,3 @@
-
 # Strata Management API Functions
 
 This directory contains serverless edge functions for the Strata Management platform.
@@ -6,12 +5,14 @@ This directory contains serverless edge functions for the Strata Management plat
 ## Available Endpoints
 
 ### 1. Maintenance Request API
+
 **Endpoint:** `/api/maintenance`  
-**Function:** `receive-maintenance-request.ts`  
+**Function:** `receive-maintenance-request.js`  
 **Method:** POST  
 **Purpose:** Allows residents to submit maintenance requests for their units.
 
 **Example Request:**
+
 ```json
 {
   "unitNumber": "12B",
@@ -25,12 +26,14 @@ This directory contains serverless edge functions for the Strata Management plat
 ```
 
 ### 2. Meeting Notification API
+
 **Endpoint:** `/api/notify`  
-**Function:** `send-meeting-notification.ts`  
+**Function:** `send-meeting-notification.js`  
 **Method:** POST  
 **Purpose:** Sends notifications about upcoming strata meetings to residents.
 
 **Example Request:**
+
 ```json
 {
   "meetingType": "committee",
@@ -47,12 +50,14 @@ This directory contains serverless edge functions for the Strata Management plat
 ```
 
 ### 3. Resident QR Code Generator API
+
 **Endpoint:** `/api/resident-qr`  
-**Function:** `generate-resident-qr.ts`  
+**Function:** `generate-resident-qr.js`  
 **Methods:** GET or POST  
 **Purpose:** Generates unique QR codes for residents to access amenities and common areas.
 
 **Example POST Request:**
+
 ```json
 {
   "unitNumber": "15A",
@@ -63,6 +68,7 @@ This directory contains serverless edge functions for the Strata Management plat
 ```
 
 **Example GET Request:**
+
 ```
 /api/resident-qr?unitNumber=15A&residentName=Emma%20Wilson&residentId=RES-15A-001&validUntil=2023-12-31
 ```
