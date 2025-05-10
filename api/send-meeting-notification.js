@@ -3,16 +3,20 @@ export const config = {
   runtime: 'edge',
 };
 
-interface MeetingNotification {
-  meetingType: 'committee' | 'general' | 'special';
-  date: string;
-  time: string;
-  location: string;
-  agenda: string[];
-  recipients?: string[]; // Optional: specific residents to notify, otherwise notify all
-}
+/**
+ * @typedef {Object} MeetingNotification
+ * @property {'committee' | 'general' | 'special'} meetingType
+ * @property {string} date
+ * @property {string} time
+ * @property {string} location
+ * @property {string[]} agenda
+ * @property {string[]} [recipients] - Optional: specific residents to notify, otherwise notify all
+ */
 
-export default async function handler(request: Request) {
+/**
+ * @param {Request} request
+ */
+export default async function handler(request) {
   // Only allow POST requests
   if (request.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
@@ -24,7 +28,7 @@ export default async function handler(request: Request) {
   }
 
   try {
-    const data = await request.json() as MeetingNotification;
+    const data = await request.json();
     
     // Validate required fields
     if (!data.meetingType || !data.date || !data.time || !data.location) {

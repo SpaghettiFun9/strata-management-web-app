@@ -3,17 +3,21 @@ export const config = {
   runtime: 'edge',
 };
 
-interface MaintenanceRequest {
-  unitNumber: string;
-  residentName: string;
-  contactEmail: string;
-  issueType: string;
-  description: string;
-  priority: 'low' | 'medium' | 'high' | 'emergency';
-  timestamp: string;
-}
+/**
+ * @typedef {Object} MaintenanceRequest
+ * @property {string} unitNumber
+ * @property {string} residentName
+ * @property {string} contactEmail
+ * @property {string} issueType
+ * @property {string} description
+ * @property {'low' | 'medium' | 'high' | 'emergency'} priority
+ * @property {string} timestamp
+ */
 
-export default async function handler(request: Request) {
+/**
+ * @param {Request} request
+ */
+export default async function handler(request) {
   // Only allow POST requests
   if (request.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
@@ -26,7 +30,7 @@ export default async function handler(request: Request) {
 
   try {
     // Parse the JSON body
-    const data = await request.json() as MaintenanceRequest;
+    const data = await request.json();
     
     // Validate required fields
     if (!data.unitNumber || !data.residentName || !data.description || !data.issueType) {

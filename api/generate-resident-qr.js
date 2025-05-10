@@ -3,14 +3,18 @@ export const config = {
   runtime: 'edge',
 };
 
-interface ResidentQRRequest {
-  unitNumber: string;
-  residentName: string;
-  residentId: string;
-  validUntil?: string; // Optional expiration date
-}
+/**
+ * @typedef {Object} ResidentQRRequest
+ * @property {string} unitNumber
+ * @property {string} residentName
+ * @property {string} residentId
+ * @property {string} [validUntil] - Optional expiration date
+ */
 
-export default async function handler(request: Request) {
+/**
+ * @param {Request} request
+ */
+export default async function handler(request) {
   // Allow both GET and POST methods
   if (request.method !== 'GET' && request.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
@@ -22,11 +26,12 @@ export default async function handler(request: Request) {
   }
 
   try {
-    let data: ResidentQRRequest;
+    /** @type {ResidentQRRequest} */
+    let data;
     
     if (request.method === 'POST') {
       // For POST, extract data from request body
-      data = await request.json() as ResidentQRRequest;
+      data = await request.json();
     } else {
       // For GET, extract data from URL parameters
       const url = new URL(request.url);
